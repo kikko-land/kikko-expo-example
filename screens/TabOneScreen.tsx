@@ -1,32 +1,140 @@
-import { StyleSheet } from 'react-native';
+import {
+  deleteFrom,
+  insert,
+  like$,
+  select,
+  sql,
+} from "@trong-orm/query-builder";
+import { faker } from "@faker-js/faker";
+import {
+  makeId,
+  runQuery,
+  useQuery,
+  useQueryFirstRow,
+  useRunQuery,
+} from "@trong-orm/react";
+import React from "react";
+import { useState } from "react";
+import { StyleSheet, Button, SafeAreaView, FlatList } from "react-native";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
+import { Text, View } from "../components/Themed";
+import { RootTabScreenProps } from "../types";
 
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+const notesTable = sql.table("notes");
+
+type INoteRow = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+const Item = ({ item }: { item: INoteRow }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
-    </View>
+    <>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text>{item.content}</Text>
+
+      <View
+        style={styles.separator}
+        lightColor="#eee"
+        darkColor="rgba(255,255,255,0.1)"
+      />
+    </>
+  );
+};
+
+export default function TabOneScreen({
+  navigation,
+}: RootTabScreenProps<"TabOne">) {
+  const [textToSearch, setTextToSearch] = useState<string>("");
+
+  const noteRowsResult = useQuery<INoteRow>(
+    select()
+      .from(notesTable)
+      .where(
+        textToSearch ? { content: like$("%" + textToSearch + "%") } : sql.empty
+      )
+  );
+
+  const notesCountResult = useQueryFirstRow<{ count: number }>(
+    select({ count: sql`COUNT(*)` }).from(notesTable)
+  );
+
+  const [createNotes, createNotesState] = useRunQuery(
+    (count: number) => async (db) => {
+      runQuery(
+        db,
+        insert(
+          Array.from(Array(count).keys()).map((i) => ({
+            id: makeId(),
+            title: faker.lorem.words(4),
+            content: faker.lorem.paragraph(),
+          }))
+        ).into(notesTable)
+      );
+    }
+  );
+
+  const [deleteAll, deleteAllState] = useRunQuery(() => async (db) => {
+    await runQuery(db, deleteFrom(notesTable));
+  });
+
+  const renderItem = ({ item }: { item: INoteRow }) => <Item item={item} />;
+
+  return (
+    <SafeAreaView style={styles.container}>
+      {noteRowsResult.type === "loaded" && noteRowsResult.data.length === 0 && (
+        <Text>No data found</Text>
+      )}
+      <FlatList
+        data={noteRowsResult.data}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
+      {notesCountResult.data && (
+        <Text>Total notes:{notesCountResult.data.count}</Text>
+      )}
+
+      {[50, 100, 1000].map((count) => (
+        <Button
+          key={count}
+          disabled={createNotesState.type === "running"}
+          onPress={() => {
+            createNotes(count);
+          }}
+          title={
+            createNotesState.type === "running"
+              ? "Adding..."
+              : `Add ${count} notes`
+          }
+          color="#841584"
+        />
+      ))}
+      <Button
+        disabled={deleteAllState.type === "running"}
+        onPress={() => {
+          deleteAll();
+        }}
+        title="Delete all notes"
+        color="red"
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 20,
     height: 1,
-    width: '80%',
+    width: "80%",
   },
 });
