@@ -5,7 +5,6 @@ import {
   select,
   sql,
 } from "@trong-orm/query-builder";
-import { faker } from "@faker-js/faker";
 import {
   makeId,
   runQuery,
@@ -16,9 +15,21 @@ import {
 import React from "react";
 import { useState } from "react";
 import { StyleSheet, Button, SafeAreaView, FlatList } from "react-native";
+import { LoremIpsum } from "lorem-ipsum";
 
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
+
+const lorem = new LoremIpsum({
+  sentencesPerParagraph: {
+    max: 8,
+    min: 4,
+  },
+  wordsPerSentence: {
+    max: 16,
+    min: 4,
+  },
+});
 
 const notesTable = sql.table("notes");
 
@@ -61,21 +72,21 @@ export default function TabOneScreen({
   );
 
   const [createNotes, createNotesState] = useRunQuery(
-    (count: number) => async (db) => {
+    (db) => async (count: number) => {
       runQuery(
         db,
         insert(
           Array.from(Array(count).keys()).map((i) => ({
             id: makeId(),
-            title: faker.lorem.words(4),
-            content: faker.lorem.paragraph(),
+            title: lorem.generateWords(4),
+            content: lorem.generateParagraphs(1),
           }))
         ).into(notesTable)
       );
     }
   );
 
-  const [deleteAll, deleteAllState] = useRunQuery(() => async (db) => {
+  const [deleteAll, deleteAllState] = useRunQuery((db) => async () => {
     await runQuery(db, deleteFrom(notesTable));
   });
 
