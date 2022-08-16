@@ -1754,6 +1754,101 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kikko-land/absurd-web-backend@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/absurd-web-backend/-/absurd-web-backend-0.2.0.tgz#1fc71750193ccd5a306e4732b27a4a97fbff4218"
+  integrity sha512-yVPiM/ES2nrJ4eLAiHcYlELJFx9fYl9tnVkcCl2wCIwnBC7mBfe40jw8Zh4AhZW6uCyvQIeyjX/Agsq+jjCszQ==
+  dependencies:
+    "@kikko-land/better-absurd-sql" "^0.0.56"
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/sql" "^0.1.1"
+    "@kikko-land/sql.js" "^1.6.8"
+    rxjs "^7.5.5"
+
+"@kikko-land/better-absurd-sql@^0.0.56":
+  version "0.0.56"
+  resolved "https://registry.yarnpkg.com/@kikko-land/better-absurd-sql/-/better-absurd-sql-0.0.56.tgz#0a240cd546cd519a96e4171fb2001166fc0697ac"
+  integrity sha512-ego4YptH88+MX/AUYMEiJf22MX8po3YOUlaUs3vMvoWzjr9L6Zihwcjf8tqARE4XE/mtZoSRsviOC7TuC6Copg==
+  dependencies:
+    safari-14-idb-fix "^1.0.4"
+
+"@kikko-land/kikko@^0.2.0":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@kikko-land/kikko/-/kikko-0.2.1.tgz#c903c9b56bdf1efc5de7159f5b561ced8c1faa01"
+  integrity sha512-41MDwe49WmFtT/UDx4D8mQDNkCvArbQwu9Kw4bFRsqvcbSH+ivcQfOGWh8ZANeUGU95n2xVK9HctR4RpmZJj8w==
+  dependencies:
+    "@kikko-land/query-builder" "^0.1.1"
+    "@kikko-land/sql" "^0.1.1"
+    rxjs "^7.5.5"
+    ts-essentials "^9.1.2"
+
+"@kikko-land/migrations-plugin@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/migrations-plugin/-/migrations-plugin-0.2.0.tgz#313015f1190f281952b42633825de4976cf8b352"
+  integrity sha512-qE4WVXBpBRX+AH30K2G007Czr8LIEQrbgiFH8HPcUJqdadAxjmKawEKOs0eTopndsYbRVa20xaESJA7H06yhuQ==
+  dependencies:
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/sql" "^0.1.1"
+
+"@kikko-land/native-expo-backend@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/native-expo-backend/-/native-expo-backend-0.2.0.tgz#4239ca7647b7698caf69e0e6c57491df6cfab168"
+  integrity sha512-Cu+gzW4vGyZAIntoy8RnFrG3t7p+iZ8Enka6v3XWDt6YaGq5QGn1O8bIIe3xUx4aE3N0Ap7DoG6uH2P71QO1+A==
+  dependencies:
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/sql" "^0.1.1"
+    "@kikko-land/sql.js" "^1.6.8"
+    expo-sqlite ">=10.0.0"
+
+"@kikko-land/query-builder@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@kikko-land/query-builder/-/query-builder-0.1.1.tgz#a8c192ea07a4fdf1461f43bbaec837fa6b5d4db0"
+  integrity sha512-RvGbv3oG7xmSg/WgsHJuoywAeXzD/SPNTBLppdzW9NFWV9cr8yIWBH2B7zruey97BRKpS8PfIpWIIy23b28UYQ==
+  dependencies:
+    "@kikko-land/sql" "^0.1.1"
+
+"@kikko-land/react-queries-hooks@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/react-queries-hooks/-/react-queries-hooks-0.2.0.tgz#64a38b2733e1d3706444508bb1aae29a25e50be7"
+  integrity sha512-0JVyYtbASXvfomaEbCRWD2MU94r1vVcWNhCCmQov8sb74/vvghHOOMTjj0ptVLtCU2r1nAwJxNkMdzWirVfT0Q==
+  dependencies:
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/reactive-queries-plugin" "^0.2.0"
+    "@kikko-land/sql" "^0.1.1"
+    rxjs "^7.5.5"
+
+"@kikko-land/react@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/react/-/react-0.2.0.tgz#6188d50a5f0a8831cb51cf5f29376fbfe5d25777"
+  integrity sha512-DRBVCMNG8qHY4XNTDF/SIJKLzaWZUSuPL8EOdg205OZruXiARNXngqzb1m0y+FbWX2513/7RNeXRIs69NxT/fw==
+  dependencies:
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/migrations-plugin" "^0.2.0"
+    "@kikko-land/react-queries-hooks" "^0.2.0"
+    "@kikko-land/reactive-queries-plugin" "^0.2.0"
+    "@kikko-land/sql" "^0.1.1"
+
+"@kikko-land/reactive-queries-plugin@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@kikko-land/reactive-queries-plugin/-/reactive-queries-plugin-0.2.0.tgz#985f9a68a36c164a2f79f02e58f2aa1b46ecef8e"
+  integrity sha512-tuBANhbxWDgN991DW6SHowxJE8ETgd6vtFXrcjfoYrS4a1Y/tVLcOYDaKJ4B7gvDyS+DBy/WNDdnhGFamqAQfQ==
+  dependencies:
+    "@kikko-land/kikko" "^0.2.0"
+    "@kikko-land/query-builder" "^0.1.1"
+    "@kikko-land/sql" "^0.1.1"
+    broadcast-channel "^4.13.0"
+    rxjs "^7.5.5"
+
+"@kikko-land/sql.js@^1.6.8":
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/@kikko-land/sql.js/-/sql.js-1.6.8.tgz#e388e11b7ec5b6c534e7e1474860e31f39ba3d58"
+  integrity sha512-2/8V69uMsqjjWCZlgT2lF9I9ImVzQjwd0MfWXNcswvYV6OPW4xQC2SMCfFzqAhHuLx0LW67ir9C7IIid/g/krA==
+
+"@kikko-land/sql@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@kikko-land/sql/-/sql-0.1.1.tgz#087a77d82c08874f629c6869f5913a0870abc1e2"
+  integrity sha512-5aQs8cNmsupJ6UXBfwWKuOBdjRYy6ZLppucSMbg8DeYUku43tRtKwEC4TJw1UqBQ5gv7Zu6MIwaABapSVCNLmA==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -2068,94 +2163,6 @@
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
-
-"@trong-orm/absurd-web-backend@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/absurd-web-backend/-/absurd-web-backend-1.1.0.tgz#8ded6c3befab77f9492ec37f5f479678983b6831"
-  integrity sha512-PxtIRJMPSbvCBJ46QsBs/JpWS9SsOnTdc/n2za0+sf6Ce6XJ8S861cEZvEzmetj1oUL/w7t3VXbFs4/EqGOIuw==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-    "@trong-orm/sql.js" "^1.6.7"
-    absurd-sql "^0.0.53"
-    rxjs "^7.5.5"
-
-"@trong-orm/core@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/core/-/core-1.1.0.tgz#34905ecd3432091d1e64b0d21cb39c8c6f0de634"
-  integrity sha512-8eERp2tuQ+02+OZOScELqg5FqC2gKvwFzlJxlbLWRg5X5fEwj5DpFyaQ6ehW4cUWVVJJ+FJU1555m5Q5rNuxng==
-  dependencies:
-    "@trong-orm/query-builder" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-    rxjs "^7.5.5"
-    ts-essentials "^9.1.2"
-
-"@trong-orm/migrations-plugin@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/migrations-plugin/-/migrations-plugin-1.1.0.tgz#f7d3a2d3fae078636a4019b0565cda4c914c746c"
-  integrity sha512-dUoOQHzgZH2LpvSYoWSSLe6uqrm4J8Q/2zqMajGgOZy4kaCfcgLSg8zhORGZRGAU4IX3b1hqhTXX7T9CW+uPFA==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-
-"@trong-orm/native-expo-backend@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/native-expo-backend/-/native-expo-backend-1.1.0.tgz#18c9ee1a391e882542faf3537565c797b6f3751f"
-  integrity sha512-ZtD2mlshtMvF/5HohyfBmurNU4cv3R4KLqR+Km4O7NvlIwsfJefkxXlAVxHPtX18gs1nCndKHChhzqhY/UtV4Q==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-    "@trong-orm/sql.js" "^1.6.7"
-    expo-sqlite ">=10.0.0"
-
-"@trong-orm/query-builder@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/query-builder/-/query-builder-1.1.0.tgz#c0985e9a64bd7732fbd9b5ebf2bb39dba70ed0e4"
-  integrity sha512-OXRlraHc/mhXlyL91rneuyMEzCAXFlNvKKHDfxFAi/9t7iS3SvLaaLzJUhlUn+OFXvz/cUmQSljdJTBErVcMjg==
-  dependencies:
-    "@trong-orm/sql" "^1.1.0"
-
-"@trong-orm/react-queries-hooks@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/react-queries-hooks/-/react-queries-hooks-1.1.0.tgz#e2060e70bd79392ee4b405762ff4e1523c06aefb"
-  integrity sha512-UboUFiOXyI+hqXSIs4wv+13y385UWKrZOyYNkNv6y6nnPnTJ3o6F/6mGosV8D3UQQ6L/5B2/EAEBfIT6XIhOiA==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/reactive-queries-plugin" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-    rxjs "^7.5.5"
-
-"@trong-orm/react@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/react/-/react-1.1.0.tgz#20da7b51fc02728317ce0408a19b3206010f6f46"
-  integrity sha512-mQrS3czbvF/M5tMY+fcVoW36zSoCJ4R8fgNeggTCBbbJdklSQQlW9ki/dIKDj+qFWaG49gKj8NePMGhoD4Ok+Q==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/migrations-plugin" "^1.1.0"
-    "@trong-orm/react-queries-hooks" "^1.1.0"
-    "@trong-orm/reactive-queries-plugin" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-
-"@trong-orm/reactive-queries-plugin@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/reactive-queries-plugin/-/reactive-queries-plugin-1.1.0.tgz#0f3c2b5097ad30a8d5fbd38280e82b209b6ffe7a"
-  integrity sha512-ulU8oDEhlUewDz6t0JZmm4CWW2W3cN12fjk2/AJJTMNXcs96QUh47YM2Y6Wv6ak+hmrhXm7YP1mFZKDxfd+Zsg==
-  dependencies:
-    "@trong-orm/core" "^1.1.0"
-    "@trong-orm/query-builder" "^1.1.0"
-    "@trong-orm/sql" "^1.1.0"
-    broadcast-channel "^4.12.0"
-    rxjs "^7.5.5"
-
-"@trong-orm/sql.js@^1.6.7":
-  version "1.6.7"
-  resolved "https://registry.yarnpkg.com/@trong-orm/sql.js/-/sql.js-1.6.7.tgz#7586a7513f7bf2d48173876e630f0e083cfbc2c5"
-  integrity sha512-A9Yz/EdUPzic2c1vcOllwCh7RJ7otsBfp9xsEqvpByKyKUVTXZHSwfnRYSApmwL5ferRXlNcz9iAKMKnQjO6DQ==
-
-"@trong-orm/sql@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@trong-orm/sql/-/sql-1.1.0.tgz#a83a4111ea680663065e0dc10cd8e3b58bd84685"
-  integrity sha512-vx4zpEvbeNOhdVwYkRk90Anv83oy6FOWpyWY+5OXLHXYbA7Y7lckRCsOxg+Cn538i2tzyZsMepa5P39dr1kCiw==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.19"
@@ -2556,11 +2563,6 @@ absolute-path@^0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/absolute-path/-/absolute-path-0.0.0.tgz#a78762fbdadfb5297be99b15d35a785b2f095bf7"
   integrity sha512-HQiug4c+/s3WOvEnDRxXVmNtSG5s2gJM9r19BTcqjp7BWcE48PB+Y2G6jE65kqI0LpsQeMZygt/b60Gi4KxGyA==
-
-absurd-sql@^0.0.53:
-  version "0.0.53"
-  resolved "https://registry.yarnpkg.com/absurd-sql/-/absurd-sql-0.0.53.tgz#e8c84cfd4cf32feb539a667f9f7afe4697c15740"
-  integrity sha512-oglPUqDOM9bqbFmeqX5dkJzfk3MccCiZ4MarcqNqonWmVIJuR+/tyEW6F766r3OiKz8H/omzI8Wdipt6NFXkFA==
 
 accepts@^1.3.7, accepts@^1.3.8, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.7, accepts@~1.3.8:
   version "1.3.8"
@@ -3294,14 +3296,14 @@ braces@^3.0.2, braces@~3.0.2:
   dependencies:
     fill-range "^7.0.1"
 
-broadcast-channel@^4.12.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/broadcast-channel/-/broadcast-channel-4.13.0.tgz#21387b2602b9e9ec3b97b03bd8a8d2c198352ff6"
-  integrity sha512-fcDr8QNJ4SOb6jyjUNZatVNmcHtSWfW4PFcs4xIEFZAtorKCIFoEYtjIjaQ4c0jrbr/Bl8NIwOWiLSyspoAnEQ==
+broadcast-channel@^4.13.0:
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/broadcast-channel/-/broadcast-channel-4.14.0.tgz#cd2ce466128130ec3a93f7c1f1ed01d658575e35"
+  integrity sha512-uNzxOgBQ+boWCRDESLNg3zZWQ3iz/X7j/uD8pAfr4/S7wQerXVvJI/SBKd9J6ckaPt2jil0gq+7l+3b+kuxJYw==
   dependencies:
     "@babel/runtime" "^7.16.0"
     detect-node "^2.1.0"
-    microtime "3.0.0"
+    microtime "3.1.0"
     oblivious-set "1.1.1"
     p-queue "6.6.2"
     rimraf "3.0.2"
@@ -8214,13 +8216,13 @@ micromatch@^4.0.2, micromatch@^4.0.4:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
-microtime@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/microtime/-/microtime-3.0.0.tgz#d140914bde88aa89b4f9fd2a18620b435af0f39b"
-  integrity sha512-SirJr7ZL4ow2iWcb54bekS4aWyBQNVcEDBiwAz9D/sTgY59A+uE8UJU15cp5wyZmPBwg/3zf8lyCJ5NUe1nVlQ==
+microtime@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/microtime/-/microtime-3.1.0.tgz#599a71250e3116c59f0fe5271dae4cc44321869c"
+  integrity sha512-GcjhfC2y/DF2znac8IRwri7+YUIy34QRHz/iZK3bHrh74qrNNOpAJQwiOMnIG+v1J0K4eiqd+RiGzN3F1eofTQ==
   dependencies:
-    node-addon-api "^1.2.0"
-    node-gyp-build "^3.8.0"
+    node-addon-api "^5.0.0"
+    node-gyp-build "^4.4.0"
 
 miller-rabin@^4.0.0:
   version "4.0.1"
@@ -8507,10 +8509,10 @@ nocache@^2.1.0:
   resolved "https://registry.yarnpkg.com/nocache/-/nocache-2.1.0.tgz#120c9ffec43b5729b1d5de88cd71aa75a0ba491f"
   integrity sha512-0L9FvHG3nfnnmaEQPjT9xhfN4ISk0A8/2j4M37Np4mcDesJjHgEUfgPhdCyZuFI954tjokaIj/A3NdpFNdEh4Q==
 
-node-addon-api@^1.2.0:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-1.7.2.tgz#3df30b95720b53c24e59948b49532b662444f54d"
-  integrity sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==
+node-addon-api@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-5.0.0.tgz#7d7e6f9ef89043befdb20c1989c905ebde18c501"
+  integrity sha512-CvkDw2OEnme7ybCykJpVcKH+uAOLV2qLqiyla128dN9TkEWfrYmxG6C2boDe5KcNQqZF3orkqzGgOMvZ/JNekA==
 
 node-dir@^0.1.17:
   version "0.1.17"
@@ -8536,10 +8538,10 @@ node-forge@^1.2.1, node-forge@^1.3.1:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
   integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
 
-node-gyp-build@^3.8.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-3.9.0.tgz#53a350187dd4d5276750da21605d1cb681d09e25"
-  integrity sha512-zLcTg6P4AbcHPq465ZMFNXx7XpKKJh+7kkN699NiQWisR2uWYOWNWqRHAmbnmKiL4e9aLSlmy5U7rEMUXV59+A==
+node-gyp-build@^4.4.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.5.0.tgz#7a64eefa0b21112f89f58379da128ac177f20e40"
+  integrity sha512-2iGbaQBV+ITgCz76ZEjmhUKAKVf7xfY1sRl4UiKQspfZMH2h06SyhNsnSVy50cwkFQDGLyif6m/6uFXHkOZ6rg==
 
 node-html-parser@^1.2.12:
   version "1.4.9"
@@ -10487,6 +10489,11 @@ rxjs@^7.5.5:
   integrity sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==
   dependencies:
     tslib "^2.1.0"
+
+safari-14-idb-fix@^1.0.4:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/safari-14-idb-fix/-/safari-14-idb-fix-1.0.6.tgz#cbaabc33a4500c44b5c432d6c525b0ed9b68bb65"
+  integrity sha512-oTEQOdMwRX+uCtWCKT1nx2gAeSdpr8elg/2gcaKUH00SJU2xWESfkx11nmXwTRHy7xfQoj1o4TTQvdmuBosTnA==
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"

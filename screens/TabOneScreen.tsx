@@ -4,14 +4,14 @@ import {
   like$,
   select,
   sql,
-} from "@trong-orm/query-builder";
+} from "@kikko-land/query-builder";
 import {
   makeId,
   runQuery,
   useQuery,
   useQueryFirstRow,
   useRunQuery,
-} from "@trong-orm/react";
+} from "@kikko-land/react";
 import React from "react";
 import { useState } from "react";
 import { StyleSheet, Button, SafeAreaView, FlatList } from "react-native";

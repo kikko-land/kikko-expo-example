@@ -7,7 +7,7 @@ import {
   migrationsPlugin,
   EnsureDbLoaded,
   DbProvider,
-} from "@trong-orm/react";
+} from "@kikko-land/react";
 import { StatusBar } from "expo-status-bar";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text } from "./components/Themed";
@@ -39,10 +39,10 @@ const config: IInitDbClientConfig = {
   dbName: "trong-db",
   dbBackend:
     Platform.OS === "web"
-      ? require("@trong-orm/absurd-web-backend").absurdWebBackend({
-          wasmUrl: require("@trong-orm/sql.js/dist/sql-wasm.wasm").default,
+      ? require("@kikko-land/absurd-web-backend").absurdWebBackend({
+          wasmUrl: require("@kikko-land/sql.js/dist/sql-wasm.wasm").default,
         })
-      : require("@trong-orm/native-expo-backend").nativeExpoBackend(),
+      : require("@kikko-land/native-expo-backend").nativeExpoBackend(),
   plugins: [
     migrationsPlugin({ migrations: [createNotesTable] }),
     reactiveQueriesPlugin({ webMultiTabSupport: Platform.OS === "web" }),
